@@ -1,15 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { privateRoutes } from "routes/routes";
-import {
-  MainContainer,
-  Container2,
-  Title,
-  Container1,
-  Image,
-  Paragraph,
-  ButtonContainer,
-  SubTitle,
-} from "./mainStyled/MainsStyled";
+import { MainContainer, Container2, Title, Container1, Image, Paragraph,
+  ButtonContainer, SubTitle } from "./mainStyled/MainsStyled";
 import NotesIcon from "assets/notes-icon.svg";
 import Button from "components/common/Button";
 import { Colors } from "themes/themes";

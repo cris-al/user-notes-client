@@ -1,12 +1,5 @@
 import { notes } from "./utilities/utilities";
-import {
-  HomeContainer,
-  Card,
-  Text,
-  Paragraph,
-  Image,
-  Container,
-  Div,
+import { HomeContainer, Card, Text, Paragraph, Image, Container, Div,
 } from "./homeStyled/HomeStyled";
 import { useState } from "react";
 import Button from "../common/Button";

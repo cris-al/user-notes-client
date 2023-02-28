@@ -39,7 +39,7 @@ export const Container1 = styled.div`
 
 export const Title = styled.h1`
   font-size: 1.8rem;
-  text-shadow: 2px 2px 10px black;
+  text-shadow: 5px 5px 5px black;
   @media screen and (min-width: 576px) {
     font-size: 2.3rem;
   }
@@ -55,7 +55,7 @@ export const Title = styled.h1`
 `;
 export const SubTitle = styled.h1`
   font-size: 1.4rem;
-  text-shadow: 2px 2px 10px black;
+  text-shadow: 5px 5px 5px black;
   @media screen and (min-width: 576px) {
     font-size: 1.8rem;
   }
@@ -72,6 +72,7 @@ export const SubTitle = styled.h1`
 
 export const Paragraph = styled.p`
   font-size: 1rem;
+  text-shadow: 5px 5px 5px black;
   @media screen and (min-width: 576px) {
     font-size: 1.2rem;
   }

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Colors } from "../../themes/themes";
+import { Colors, ResponsiveWidth } from "themes/themes";
 
 const InputStyled = styled.input`
   border: none;
@@ -10,7 +10,7 @@ const InputStyled = styled.input`
   color: ${Colors.word.grey};
   outline: none;
   box-shadow: 5px 5px 10px ${Colors.shadow.black};
-  @media and screen (min-width: 768px) {
+  @media and screen (min-width: ${ResponsiveWidth.md}) {
     font-size: 1.1rem;
   }
 `;

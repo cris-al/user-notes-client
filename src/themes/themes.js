@@ -21,3 +21,11 @@ export const Colors = {
     black: "black",
   },
 };
+
+export const ResponsiveWidth = {
+  xs: "375px",
+  sm: "576px",
+  md: "768px",
+  lg: "992px",
+  xl: "1200px",
+};

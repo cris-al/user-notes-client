@@ -6,4 +6,4 @@ const Div = styled.div`
 
 export default function WindowsSize({ children }) {
   return <Div>{children}</Div>;
-}
+};

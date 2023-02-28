@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Colors } from "../../themes/themes";
+import { Colors, ResponsiveWidth } from "themes/themes";
 
 const ButtonStyled = styled.button`
   background-color: ${({ backgroundColor }) =>
@@ -15,21 +15,15 @@ const ButtonStyled = styled.button`
     background-color: ${({ backgroundHover }) =>
       backgroundHover ? backgroundHover : Colors.hover.green};
   }
-  @media screen and (min-width: 576px) {
+  @media screen and (min-width: ${ResponsiveWidth.sm}) {
     font-size: 0.9rem;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${ResponsiveWidth.md}) {
     font-size: 1rem;
   }
 `;
 
-export default function Button({
-  text,
-  onClick,
-  type = "button",
-  backgroundColor,
-  backgroundHover,
-}) {
+export default function Button({ text, onClick, type = "button", backgroundColor, backgroundHover }) {
   return (
     <ButtonStyled
       onClick={onClick}
@@ -40,4 +34,4 @@ export default function Button({
       {text}
     </ButtonStyled>
   );
-}
+};
