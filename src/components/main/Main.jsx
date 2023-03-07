@@ -1,46 +1,32 @@
-import { useNavigate } from "react-router-dom";
-import { privateRoutes } from "routes/routes";
 import { MainContainer, Container2, Title, Container1, Image, Paragraph,
   ButtonContainer, SubTitle } from "./mainStyled/MainsStyled";
 import NotesIcon from "assets/notes-icon.svg";
 import Button from "components/common/Button";
 import { Colors } from "themes/themes";
+import { useMain } from "./hook/useMain";
+import { title, subTitle, paragraph, textButtonRegister, textButtonSession } from "./text/index";
 
 export default function Main() {
-  const navigate = useNavigate();
+  const { toLogin, toRegister } = useMain();
 
-  function toLogin() {
-    navigate(privateRoutes.LOGIN);
-  }
-
-  function toRegister() {
-    navigate(privateRoutes.REGISTER);
-  }
   return (
-    <MainContainer className="my-4 my-sm-5">
-      <div className="d-flex text-center">
-        <Title>Notas de Usuario</Title>
-      </div>
+    <MainContainer>
+      <Title>{title}</Title>
       <Container1>
         <div>
           <Image src={NotesIcon} alt="icono de notas" />
         </div>
         <Container2>
-          <SubTitle>Bienvenidos</SubTitle>
-          <Paragraph>
-            Notas de Usuario es una aplicación en la que podrás tomar notas
-            sobre lo que desees y quedarán guardadas para que las veas cuando
-            gustes.
-          </Paragraph>
+          <SubTitle>{subTitle}</SubTitle>
+          <Paragraph>{paragraph}</Paragraph>
           <ButtonContainer>
             <Button
-              text="Iniciar Sesión"
+              text={textButtonSession}
               onClick={toLogin}
               backgroundColor={Colors.background.blue}
               backgroundHover={Colors.hover.blue}
             />
-
-            <Button text="Registrarme" onClick={toRegister} />
+            <Button text={textButtonRegister} onClick={toRegister} />
           </ButtonContainer>
         </Container2>
       </Container1>

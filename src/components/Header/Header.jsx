@@ -1,6 +1,6 @@
 import Button from "../common/Button";
-import { privateRoutes } from "../../routes/routes";
-import {
+import { publicRoutes } from "routes/routes";
+import { LinkStyledButton,
   HeaderContainer,
   LinkStyled,
   LinksContainer,
@@ -19,20 +19,10 @@ export default function Header({ show, setShow }) {
   return (
     <HeaderContainer>
       <Image src={NotesIcon} alt="imagen" />
-      <div className="d-flex gap-3">
-        <Button
-          text="Iniciar Sesión"
-          onClick={handleShow}
-          backgroundColor={Colors.background.blue}
-          backgroundHover={Colors.hover.blue}
-        />
-        <Button
-          text="Registrarme"
-          onClick={handleShow}
-          backgroundColor={Colors.background.red}
-          backgroundHover={Colors.hover.red}
-        />
-      </div>
+      {/* <div className="d-flex gap-3">
+        <LinkStyledButton to={publicRoutes.LOGIN}>Iniciar Sesión</LinkStyledButton>
+        <LinkStyledButton to={publicRoutes.REGISTER}>Registrarme</LinkStyledButton>
+      </div> */}
       {/* <LinksContainer>
         <LinkStyled to={privateRoutes.NOTES}>
           <Paragraph>Notas</Paragraph>
