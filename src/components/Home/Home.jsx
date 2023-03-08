@@ -1,33 +1,31 @@
 import { notes } from "./utilities/utilities";
-import { HomeContainer, NoteContainer } from "./homeStyled/HomeStyled";
-import { useState } from "react";
-import Button from "../common/Button";
-import Header from "components/Header/Header";
-import SubTitle from "components/common/SubTitle";
-import ImageTest from "assets/tree-736885__480.jpg";
-import SideBar from "components/SideBar/SideBar";
+import { HomeContainer, NoteContainer, Note, NoteDescription,
+  NoteTitle, ButtonContainer } from "./homeStyled/HomeStyled";
 import Title from "components/common/Title";
+import Button from "components/common/Button";
+import { Colors } from "themes/themes";
 
 export default function Home() {
-  const [show, setShow] = useState(false);
-  const [note, setNote] = useState({
-    title: "",
-    content: "",
-  });
-  function handleClick(e, el) {
-    e.preventDefault();
-    setNote({
-      title: el.title,
-      content: el.content,
-    });
-  }
 
   return (
     <HomeContainer>
       <Title text="Mis Notas"/>
+      <ButtonContainer>
+        <Button text="Nueva Nota"/>
+      </ButtonContainer>
       <NoteContainer>
-        Hola
+        { notes.map(note =>
+            <Note key={note.title}>
+              <NoteTitle>{note.title}</NoteTitle>
+              <NoteDescription>{note.content}</NoteDescription>
+              <ButtonContainer>
+                <Button text="Editar" backgroundColor={Colors.background.blue}
+                  backgroundHover={Colors.hover.blue}/>
+                <Button text="Eliminar" backgroundColor={Colors.background.red}
+                  backgroundHover={Colors.hover.red}/>
+              </ButtonContainer>
+            </Note>) }
       </NoteContainer>
     </HomeContainer>
   );
-}
+};

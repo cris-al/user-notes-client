@@ -6,7 +6,7 @@ export const Colors = {
   background: {
     green: "#00695c",
     darkGreen: "#004d40",
-    grey: "#424242",
+    black: "#424242",
     darkGrey: "#37474f",
     blue: "#0d47a1",
     red: "#d50000",
@@ -16,6 +16,7 @@ export const Colors = {
     red: "#e53935",
     blue: "#1565c0",
     grey: "#eeeeee",
+    black: "#424242"
   },
   shadow: {
     grey: "#eeeeee",
