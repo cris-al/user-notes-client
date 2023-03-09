@@ -5,3 +5,8 @@ export const validationSchema = Yup.object().shape({
     .required('Campo requerido'),
     password: Yup.string().min(8, 'Debe contener almenos 8 caracteres').required('Campo requerido')
 });
+
+export const initialValues = {
+    email: "",
+    password: "",
+};

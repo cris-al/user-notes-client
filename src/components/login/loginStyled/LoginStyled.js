@@ -7,6 +7,7 @@ export const MainContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 1rem 0;
 `;
 
 export const FormLogin = styled.form`
@@ -40,15 +41,6 @@ export const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-`;
-
-export const Error = styled.div`
-  color: red;
-  font-size: 0.7rem;
-  text-decoration: none;
-  @media screen and (min-width: 768px) {
-    font-size: 0.8rem;
-  }
 `;
 
 export const ButtonContainer = styled.div`

@@ -7,6 +7,7 @@ export const RegisterContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 1rem 0;
 `;
 
 export const ButtonContainer = styled.div`
