@@ -1,27 +1,14 @@
-import {
-  MainContainer,
-  Form,
-  Label,
-  InputContainer,
-  TextArea,
-  ButtonContainer,
-  Error,
-} from "./NotesFormStyles/NotesFormStyles";
+import { MainContainer, Form, Label, InputContainer, TextArea,
+  ButtonContainer } from "./NotesFormStyles/NotesFormStyles";
 import Title from "components/common/Title";
 import Input from "components/common/Input";
 import Button from "components/common/Button";
+import Error from "components/common/Error";
 import { useNotes } from "./hook/useNotes";
 
 export default function NotesForm() {
-  const {
-    id,
-    handleChange,
-    handleBlur,
-    handleSubmit,
-    values,
-    errors,
-    touched,
-  } = useNotes();
+  const { id, handleChange, handleBlur, handleSubmit, values, errors,
+    touched } = useNotes();
 
   return (
     <MainContainer>
@@ -36,7 +23,7 @@ export default function NotesForm() {
             handleChange={handleChange}
             handleBlur={handleBlur}
           />
-          {errors.title && touched.title && <Error>{errors.title}</Error>}
+          <Error error={errors.title} touched={touched.title}/>
         </InputContainer>
         <InputContainer>
           <Label>Descripción:</Label>
@@ -48,9 +35,7 @@ export default function NotesForm() {
             onChange={handleChange}
             onBlur={handleBlur}
           />
-          {errors.description && touched.description && (
-            <Error>{errors.description}</Error>
-          )}
+          <Error error={errors.description} touched={touched.description}/>
         </InputContainer>
         <ButtonContainer>
           <Button text={id ? "Editar" : "Crear"} type="submit" />

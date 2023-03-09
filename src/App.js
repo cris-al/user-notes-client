@@ -23,10 +23,7 @@ function App() {
             <Route path={publicRoutes.REGISTER} element={<Register />} />
             <Route path={privateRoutes.NOTES} element={<Notes />} />
             <Route path={privateRoutes.CREATEFORM} element={<NotesForm />} />
-            <Route
-              path={privateRoutes.EDITFORMWITHID}
-              element={<NotesForm />}
-            />
+            <Route path={privateRoutes.EDITFORMWITHID} element={<NotesForm />} />
           </Routes>
         </WindowsSize>
       </div>

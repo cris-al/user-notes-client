@@ -6,6 +6,7 @@ export const MainContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 1rem 0;
 `;
 
 export const Form = styled.form`
@@ -53,8 +54,10 @@ export const TextArea = styled.textarea`
   font-size: 1rem;
   padding: 0.5rem 0.7rem;
   background-color: ${Colors.background.grey};
+  box-shadow: 5px 5px 10px ${Colors.shadow.black};
   color: ${Colors.word.grey};
   resize: none;
+  outline: none;
   @media and screen (min-width: 768px) {
     font-size: 1.1rem;
   }

@@ -2,11 +2,12 @@ export const Colors = {
   word: {
     grey: "#bdbdbd",
     green: "#00695c",
+    red: "#d50000"
   },
   background: {
     green: "#00695c",
     darkGreen: "#004d40",
-    black: "#424242",
+    grey: "#424242",
     darkGrey: "#37474f",
     blue: "#0d47a1",
     red: "#d50000",
