@@ -10,6 +10,7 @@ import NotesForm from "components/NotesForm/NotesForm";
 import Notes from "components/Notes/Notes";
 import Register from "./components/register/Register";
 import WindowsSize from "components/common/WindowsSize";
+import Auth from "auth/Auth";
 
 function App() {
   return (
@@ -18,12 +19,14 @@ function App() {
         <WindowsSize>
           <Routes>
             <Route exact path={publicRoutes.MAIN} element={<Main />} />
-            <Route path={privateRoutes.HOME} element={<Home />} />
-            <Route path={publicRoutes.LOGIN} element={<Login />} />
             <Route path={publicRoutes.REGISTER} element={<Register />} />
-            <Route path={privateRoutes.NOTES} element={<Notes />} />
-            <Route path={privateRoutes.CREATEFORM} element={<NotesForm />} />
-            <Route path={privateRoutes.EDITFORMWITHID} element={<NotesForm />} />
+            <Route path={publicRoutes.LOGIN} element={<Login />} />
+            <Route element={<Auth />}>
+              <Route path={privateRoutes.HOME} element={<Home />} />
+              <Route path={privateRoutes.NOTES} element={<Notes />} />
+              <Route path={privateRoutes.CREATEFORM} element={<NotesForm />} />
+              <Route path={privateRoutes.EDITFORMWITHID} element={<NotesForm />} />
+            </Route>
           </Routes>
         </WindowsSize>
       </div>
